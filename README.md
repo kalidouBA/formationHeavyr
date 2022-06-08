@@ -1,4 +1,5 @@
 # formationHeavyr
 
-# Editing this file to create a conflict. 
-# Perfect we can resolve conflict
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/kalidouBA/formationHeavyr/workflows/R-CMD-check/badge.svg)](https://github.com/kalidouBA/formationHeavyr/actions)
+  <!-- badges: end -->
