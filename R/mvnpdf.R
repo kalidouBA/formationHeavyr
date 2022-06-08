@@ -1,4 +1,4 @@
-#' Density of a multivariate normal distribution (+ du super text)
+#' Density of a multivariate normal distribution
 #'
 #' We want to compute the value of the density of a
 #' multivariate normal distribution on R p at n points.
