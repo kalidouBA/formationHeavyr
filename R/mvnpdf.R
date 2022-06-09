@@ -38,9 +38,7 @@ mvnpdf <- function(x, mean = rep(0,nrow(x)),
                    varcovM = diag(nrow(x)),
                    Log=TRUE){
 
-  # stopifnot(is.matrix(x))
-  # stopifnot(is.array(mean))
-  # stopifnot(is.matrix(varcovM))
+  stopifnot(is.matrix(x))
 
   n <- ncol(x)
   p <- nrow(x)
@@ -48,7 +46,6 @@ mvnpdf <- function(x, mean = rep(0,nrow(x)),
   Rinv <- solve(varcovM)
   logDetvarcovM <- log(det(varcovM))
 
-  y <- NULL
   results <- rep(NA, n)
   for (j in 1:n){
     resf <- -p/2*log(2*pi)-.5*logDetvarcovM-
