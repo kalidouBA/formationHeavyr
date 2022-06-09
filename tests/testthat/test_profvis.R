@@ -3,5 +3,6 @@ test_that("compare with profvis", {n <- 1000
                      mvnpdf(x=matrix(1.96, nrow = 2, ncol = n), Log=FALSE),
                      mvnpdfsmart(x=matrix(1.96, nrow = 2, ncol = n), Log=FALSE),
                      mvnpdfoptim(x=matrix(1.96, nrow = 2, ncol = n), Log=FALSE),
+                     mvnpdf_invC(x=matrix(1.96, nrow = 2, ncol = n), Log=FALSE),
                      times=100L)
 })

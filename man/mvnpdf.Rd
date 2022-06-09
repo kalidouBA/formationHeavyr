@@ -4,6 +4,7 @@
 \alias{mvnpdf}
 \alias{mvnpdfoptim}
 \alias{mvnpdfsmart}
+\alias{mvnpdf_invC}
 \title{Density of a multivariate normal distribution}
 \usage{
 mvnpdf(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
@@ -11,6 +12,8 @@ mvnpdf(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 mvnpdfoptim(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
 mvnpdfsmart(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+
+mvnpdf_invC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 }
 \arguments{
 \item{x}{a matrix, with \code{n} columns \code{the observations} and
