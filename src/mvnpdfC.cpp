@@ -23,14 +23,12 @@ NumericVector mvnpdfC(arma::mat x,
   NumericVector y(n);
 
   mat Rinv = inv(trimatu(chol(varcovM)));
-  //mat R = chol(as<arma::mat>(varcovM));
   double logSqrtDetvarcovM = sum(log(Rinv.diag()));
   double constant = - p*log2pi2;
 
   for (int i=0; i < n; i++) {
     colvec x_i = x.col(i) - mean;
     rowvec xRinv = trans(x_i)*Rinv;
-    //vec xRinv = solve(trimatl(R.t()), x_i);
     double quadform = sum(xRinv%xRinv);
     if (!Log) {
       y(i) = exp(-0.5*quadform + logSqrtDetvarcovM + constant);

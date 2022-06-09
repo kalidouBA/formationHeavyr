@@ -3,6 +3,7 @@
 export(invC)
 export(mvnpdf)
 export(mvnpdfC)
+export(mvnpdfC_R)
 export(mvnpdf_invC)
 export(mvnpdfoptim)
 export(mvnpdfsmart)

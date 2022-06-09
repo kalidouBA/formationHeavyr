@@ -53,7 +53,7 @@ mvnpdf_invC <- function(x, mean =  rep(0, nrow(x)),
 
 #' @rdname mvnpdf
 #' @export
-mvnpdfC <- function(x, mean =  rep(0, nrow(x)),
+mvnpdfC_R <- function(x, mean =  rep(0, nrow(x)),
                         varcovM = diag(nrow(x)), Log = TRUE) {
   res <- mvnpdfC(x,mean,varcovM, Log)
   return(res)

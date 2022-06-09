@@ -7,11 +7,12 @@
 \alias{mvnpdfoptim}
 \alias{mvnpdfsmart}
 \alias{mvnpdf_invC}
+\alias{mvnpdfC_R}
 \title{Based on the implementation from Nino Hardt and Dicko Ahmadou
 http://gallery.rcpp.org/articles/dmvnorm_arma/
 (accessed in August 2014)}
 \usage{
-mvnpdfC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+mvnpdfC(x, mean, varcovM, Log = TRUE)
 
 mvnpdf(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
@@ -21,7 +22,7 @@ mvnpdfsmart(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
 mvnpdf_invC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 
-mvnpdfC(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
+mvnpdfC_R(x, mean = rep(0, nrow(x)), varcovM = diag(nrow(x)), Log = TRUE)
 }
 \arguments{
 \item{x}{a matrix, with \code{n} columns \code{the observations} and
