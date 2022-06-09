@@ -1,5 +1,5 @@
 #include <RcppArmadillo.h>
-using namespace Rcpp;
+using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
 //'Compute inverse matrix in c++
 //'@param A a matrix

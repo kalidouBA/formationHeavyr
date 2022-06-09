@@ -16,3 +16,14 @@ invC <- function(A) {
     .Call(`_formationHeavyr_invC`, A)
 }
 
+#'Based on the implementation from Nino Hardt and Dicko Ahmadou
+#'http://gallery.rcpp.org/articles/dmvnorm_arma/
+#'(accessed in August 2014)
+#'
+#'@rdname mvnpdf
+#'@export
+#'
+mvnpdfC <- function(x, mean, varcovM, Log = TRUE) {
+    .Call(`_formationHeavyr_mvnpdfC`, x, mean, varcovM, Log)
+}
+

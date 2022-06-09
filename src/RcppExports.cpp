@@ -33,10 +33,25 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// mvnpdfC
+NumericVector mvnpdfC(arma::mat x, arma::colvec mean, arma::mat varcovM, bool Log);
+RcppExport SEXP _formationHeavyr_mvnpdfC(SEXP xSEXP, SEXP meanSEXP, SEXP varcovMSEXP, SEXP LogSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type x(xSEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type mean(meanSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type varcovM(varcovMSEXP);
+    Rcpp::traits::input_parameter< bool >::type Log(LogSEXP);
+    rcpp_result_gen = Rcpp::wrap(mvnpdfC(x, mean, varcovM, Log));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_formationHeavyr_timesTwo", (DL_FUNC) &_formationHeavyr_timesTwo, 1},
     {"_formationHeavyr_invC", (DL_FUNC) &_formationHeavyr_invC, 1},
+    {"_formationHeavyr_mvnpdfC", (DL_FUNC) &_formationHeavyr_mvnpdfC, 4},
     {NULL, NULL, 0}
 };
 
